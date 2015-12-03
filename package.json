@@ -1,0 +1,22 @@
+{
+  "name": "troll",
+  "version": "1.0.0",
+  "description": "Troll Quotes is a web application built on Express and MongoDB that provides users with a randomized assemblage containing a quote, author, and image that can be saved and shared on social media platforms.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brittonwalker/troll_quotes.git"
+  },
+  "author": "Britton Walker, Andrew Johnson, Armani Hall",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brittonwalker/troll_quotes/issues"
+  },
+  "homepage": "https://github.com/brittonwalker/troll_quotes#readme",
+  "dependencies": {
+    "mongoose": "^4.2.9"
+  }
+}
