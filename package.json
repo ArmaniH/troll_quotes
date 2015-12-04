@@ -18,5 +18,6 @@
   "homepage": "https://github.com/brittonwalker/troll_quotes#readme",
   "dependencies": {
     "mongoose": "^4.2.9"
-  }
+  },
+  "devDependencies": {}
 }
