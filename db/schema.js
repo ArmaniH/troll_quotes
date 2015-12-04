@@ -2,7 +2,7 @@ var mongoose = require("mongoose");
 mongoose.connect("mongodb://locahost/troll_quotes");
 
 var Schema = mongoose.Schema;
-var ObjectId = Schema.Types.objectId;
+var ObjectId = Schema.objectId;
 
 var AuthorSchema = new Schema(
   {
@@ -22,6 +22,9 @@ var ImageSchema = new Schema(
   }
 );
 
+var AuthorModel = mongoose.model("Author", AuthorSchema);
+var ImageModel = mongoose.model("Image", ImageSchema);
+var QuoteModel = mongoose.model("Quote", QuoteSchema);
 
 
 
