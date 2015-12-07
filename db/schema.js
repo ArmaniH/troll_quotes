@@ -1,8 +1,30 @@
 var mongoose = require("mongoose");
-mongoose.connect("mongodb://locahost/troll_quotes");
+mongoose.connect("mongodb://localhost/troll_quotes");
 
+var Schema = mongoose.Schema;
+var ObjectId = Schema.objectId;
 
+var AuthorSchema = new Schema(
+  {
+    name: String
+  }
+);
 
+var QuoteSchema = new Schema(
+  {
+    text: String
+  }
+);
+
+var ImageSchema = new Schema(
+  {
+    url: String
+  }
+);
+
+var AuthorModel = mongoose.model("Author", AuthorSchema);
+var ImageModel = mongoose.model("Image", ImageSchema);
+var QuoteModel = mongoose.model("Quote", QuoteSchema);
 
 
 
