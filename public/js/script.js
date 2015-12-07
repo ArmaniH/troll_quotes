@@ -12,9 +12,9 @@ $(document).ready(function(){
       var authorTag = $('.author');
       var quoteTag = $('.quote');
       var imgTag = $('.image');
-      authorTag.text(author);
-      quoteTag.text(quote);
-      imgTag.attr('src', image)
+      imgTag.attr('src', image);
+      authorTag.text("- " + author);
+      quoteTag.text('"' + quote + '"');
     })
   })
 });
