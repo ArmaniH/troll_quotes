@@ -1,9 +1,9 @@
 require("./schema");
-var mongoose = require("mongoose");
-var db = mongoose.connection;
+var mongoose   = require("mongoose");
+var db         = mongoose.connection;
 var AuthorData = require("./author_data");
-var ImageData = require("./image_data");
-var QuoteData = require("./quote_data");
+var ImageData  = require("./image_data");
+var QuoteData  = require("./quote_data");
 
 db.on("error", function(err){
   console.log("Oops! Mongo threw an error. Is `mongod` running?");
