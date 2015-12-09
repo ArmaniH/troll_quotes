@@ -26,16 +26,16 @@ $('#export').on('click', function() {
   // var queue = html2canvas.Parse('#rectangle', images);
   // var canvas = html2canvas.Renderer(queue);
 
-  var img = canvas.toDataURL('image/png;base64');
+    var img = canvas.toDataURL();
 
-  img = img.replace('data:image/png;base64,', '');
-  processImg(img);
-  document.body.appendChild(container);
-  },
-  "proxy": '',
-  "logging" : true,
-  "allowTaint": true,
-  backgroundColor: "white"
+  // img = img.replace('data:image/png;base64,', '');
+  // processImg(img);
+    document.body.appendChild(canvas);
+    },
+    "proxy": '',
+    "logging" : true,
+    "allowTaint": true,
+    backgroundColor: "white"
   });
 
 });
