@@ -19,6 +19,7 @@ img {
   /*height: 350px;*/
   position: absolute;
   bottom: 0;
+  /*display: none;*/
 }
 
 p {
