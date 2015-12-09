@@ -80,3 +80,21 @@ a.animated-button.victoria-three:hover:after {
 	height: 140%;
 	opacity: 1;
 }
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: #fff;
+  font-size:14px;
+	font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+#twitter-login {
+  margin-left: 400px;
+}
