@@ -3,6 +3,7 @@
  * and save the image file
  */
 
+
 var Canvas2Image = function () {
 
 	// check if support sth.
@@ -19,6 +20,7 @@ var Canvas2Image = function () {
 	}();
 
 	var downloadMime = 'image/octet-stream';
+
 
 	function scaleCanvas (canvas, width, height) {
 		var w = canvas.width,
@@ -38,10 +40,10 @@ var Canvas2Image = function () {
 		return retCanvas;
 	}
 
-	function getDataURL (canvas, type, width, height) {
-		canvas = scaleCanvas(canvas, width, height);
-		return canvas.toDataURL(type);
-	}
+	// function getDataURL (canvas, type, width, height) {
+	// 	canvas = scaleCanvas(canvas, width, height);
+	// 	return canvas.toDataURL(type);
+	// }
 
 	function saveFile (strData) {
 		document.location.href = strData;
@@ -207,8 +209,8 @@ var Canvas2Image = function () {
 				var strData = genBitmapImage(data);
 				saveFile(makeURI(strData, downloadMime));
 			} else {
-				var strData = getDataURL(canvas, type, width, height);
-				saveFile(strData.replace(type, downloadMime));
+				// var strData = getDataURL(canvas, type, width, height);
+				// saveFile(strData.replace(type, downloadMime));
 			}
 		}
 	};
@@ -263,3 +265,4 @@ var Canvas2Image = function () {
 	};
 
 }();
+//lines 43, 210, and 211 are commented out to resolve saveAsPNG erorr
