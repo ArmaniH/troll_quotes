@@ -17,39 +17,20 @@ $(document).ready(function(){
       imgTag.attr('src', image)
     })
   })
-//
 
-$('#export').on('click', function() {
-  html2canvas($('#rectangle'), {
-  complete: function(canvas) {
-
-  // var queue = html2canvas.Parse('#rectangle', images);
-  // var canvas = html2canvas.Renderer(queue);
-
-    var img = canvas.toDataURL();
-
-  // img = img.replace('data:image/png;base64,', '');
-  // processImg(img);
-    document.body.appendChild(canvas);
-    },
-    "proxy": '',
-    "logging" : true,
-    "allowTaint": true,
-    backgroundColor: "white"
+  $('#export').on('click', function() {
+    html2canvas($('#rectangle'), {
+      "logging" : false,
+      "allowTaint": true,
+      onrendered: function(canvas) {
+        theCanvas = canvas;
+        document.body.appendChild(canvas);
+        $("#favorites").append(canvas);
+        return Canvas2Image.saveAsPNG(canvas);
+        document.body.removeChild(canvas);
+      },
+    });
   });
-
-});
-
-// $('#export').on('click', function() {
-//   html2canvas($('#rectangle'), 'proxyURL' {
-//           onrendered: function(canvas) {
-//               // canvas is the final rendered <canvas> element
-//                 var myImage = canvas.toDataURL("image/png", 0.5);
-//               document.body.appendChild(canvas);
-//               // window.open(myImage);
-//           },
-//       });
-//     });
 });
 
 

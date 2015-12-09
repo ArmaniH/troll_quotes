@@ -80,3 +80,19 @@ a.animated-button.victoria-three:hover:after {
 	height: 140%;
 	opacity: 1;
 }
+
+.favorite {
+  position: absolute;
+  padding: 10em;
+}
+
+#favorites{
+  display: inline-block;
+}
+
+.off-screen {
+  position: fixed;
+  left: -200px;
+  top: 0;
+  padding: 1em;
+}
