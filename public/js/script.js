@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-  $('a').click(function(e){
+  $('.animated-button').click(function(e){
     e.preventDefault();
     var randomTroll = "http://localhost:3000/randomTroll";
     $.getJSON(randomTroll)
