@@ -9,8 +9,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser   = require('body-parser');
 var session      = require('express-session');
 
-app.use(express.static(path.join(__dirname, "/public")));
-app.use(bodyParser.json());
+
 
 app.use(morgan('dev'));
 app.use(cookieParser());
@@ -18,9 +17,12 @@ app.use(bodyParser());
 
 app.use("/", require("./controllers/troll-quotes"));
 
+
 app.set("view engine", "hbs");
 app.set("views", "./public/views");
 app.use(express.static(__dirname + '/public'))
+
+
 
 app.use(session({
   secret: 'TROLLY-SHIT',
@@ -41,6 +43,8 @@ app.use(function (req, res, next) {
 
 var routes = require('./config/routes');
 app.use(routes);
+
+
 
 app.listen(3000, function(){
   console.log("Listening on port 3000");

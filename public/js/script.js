@@ -30,7 +30,6 @@ $(document).ready(function(){
       authorTag.text("- " + author);
       quoteTag.text('"' + quote + '"');
     })
-<<<<<<< HEAD
   })
 
   $('#export').on('click', function() {
@@ -47,7 +46,6 @@ $(document).ready(function(){
       },
     });
   });
-=======
 
   });
 
@@ -57,6 +55,4 @@ $(document).ready(function(){
     console.log(authorTag.text());
   });
 
-
->>>>>>> 11719b7969c17dc3669b62a6267dc6e64ac84c9d
 });

@@ -265,4 +265,4 @@ var Canvas2Image = function () {
 	};
 
 }();
-//lines 43, 210, and 211 are commented out to resolve saveAsPNG erorr
+//lines 43-46, 212, and 213 are commented out to resolve saveAsPNG erorr
