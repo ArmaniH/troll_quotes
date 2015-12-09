@@ -9,16 +9,17 @@ var cookieParser = require('cookie-parser');
 var bodyParser   = require('body-parser');
 var session      = require('express-session');
 
+var express = require("express");
+var app = express();
+var path = require("path");
+var bodyParser = require("body-parser");
 
-<<<<<<< HEAD
 app.use(express.static(path.join(__dirname, "/public")));
 app.use(bodyParser.json());
 
 app.get("/", function(req, res){
   res.render("layout.hbs");
 });
-=======
->>>>>>> 3d65f4fbcfe03fe49e12f6e594ae8fd55d807ae6
 
 app.use(morgan('dev'));
 app.use(cookieParser());
@@ -26,12 +27,9 @@ app.use(bodyParser());
 
 app.use("/", require("./controllers/troll-quotes"));
 
-
 app.set("view engine", "hbs");
 app.set("views", "./public/views");
 app.use(express.static(__dirname + '/public'))
-
-
 
 app.use(session({
   secret: 'TROLLY-SHIT',
@@ -52,8 +50,6 @@ app.use(function (req, res, next) {
 
 var routes = require('./config/routes');
 app.use(routes);
-
-
 
 app.listen(3000, function(){
   console.log("Listening on port 3000");

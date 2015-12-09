@@ -17,4 +17,18 @@ $(document).ready(function(){
       quoteTag.text('"' + quote + '"');
     })
   })
+
+  $('#export').on('click', function() {
+    html2canvas($('#rectangle'), {
+      "logging" : false,
+      "allowTaint": true,
+      onrendered: function(canvas) {
+        theCanvas = canvas;
+        document.body.appendChild(canvas);
+        $("#favorites").append(canvas);
+        return Canvas2Image.saveAsPNG(canvas);
+        document.body.removeChild(canvas);
+      },
+    });
+  });
 });
