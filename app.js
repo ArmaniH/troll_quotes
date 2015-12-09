@@ -10,6 +10,15 @@ var bodyParser   = require('body-parser');
 var session      = require('express-session');
 
 
+<<<<<<< HEAD
+app.use(express.static(path.join(__dirname, "/public")));
+app.use(bodyParser.json());
+
+app.get("/", function(req, res){
+  res.render("layout.hbs");
+});
+=======
+>>>>>>> 3d65f4fbcfe03fe49e12f6e594ae8fd55d807ae6
 
 app.use(morgan('dev'));
 app.use(cookieParser());
