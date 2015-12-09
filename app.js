@@ -7,9 +7,9 @@ var bodyParser = require("body-parser");
 app.use(express.static(path.join(__dirname, "/public")));
 app.use(bodyParser.json());
 
-// app.get("/", function(req, res){
-//   res.render("layout.hbs");
-// });
+app.get("/", function(req, res){
+  res.render("layout.hbs");
+});
 
 
 app.use("/", require("./controllers/troll-quotes"));
