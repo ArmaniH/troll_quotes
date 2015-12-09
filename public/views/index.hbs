@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+
+    <ul>
+      {{#if currentUser}}
+        <li><a href="/logout">Logout</a></li<a>
+      {{else}}
+        <li><a href="/login">Login</a></li>
+        <li><a href="/signup">Signup</a></li>
+      {{/if}}
+    </ul>
+
+
+
+    {{#if currentUser.local.email}}
+      Welcome {{currentUser.local.email}}!
+
+      {{else if currentUser.twitter.username}}
+        Welcome {{currentUser.twitter.username}}!
+
+      {{else if currentUser.facebook.id}}
+        Welcome {{currentUser.facebook.id}}!
+
+      {{else}}
+        Welcome!
+    {{/if}}
+
+    <div id="rectangle">
+      <img src="" class="image">
+      <p class='quote'></p>
+      <p class='author'></p>
+    </div>
+    <a href="" class="animated-button victoria-three">Generate Quote</a>
+    <a href="" class="button">Here</a>
+  </body>
+</html>
