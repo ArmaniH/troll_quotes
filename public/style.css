@@ -2,6 +2,7 @@
     background-color: #1f2a44;
     color: white;
     font-family: 'Roboto', sans-serif;
+    /*padding: 25px;*/
   }
   #rectangle {
     width: 600px;
@@ -13,8 +14,7 @@
     margin-top: 5%;
   }
   img {
-    width: 350px;
-    /*height: 350px;*/
+    height: 350px;
     position: absolute;
     bottom: 0;
     /*display: none;*/
@@ -35,6 +35,11 @@ margin-left: 400px;*/
     font-style: italic;
     text-align: right;
     padding-right: 5%;
+    margin-top: 5%;
+    /*clear: right;*/
+  }
+  .quote {
+    margin-top: 5%;
     /*clear: right;*/
   }
   /* Generate Button */
@@ -91,13 +96,13 @@ margin-left: 400px;*/
   /* Favorites Styling*/
 
   .favorite {
-    position: absolute;
-    padding: 10em;
   }
+
   #favorites {
-    display: table;
-    width: 100%;
-    float: left;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 30px;
+    text-align: center;
   }
   .off-screen {
     position: fixed;
@@ -127,27 +132,7 @@ margin-left: 400px;*/
     margin: 0;
     padding: 0;
   }
-  body {
-    padding: 25px;
-    font: 16px/1.4 'Open Sans', sans-serif;
-  }
-  header {
-    float: left;
-    display: inline-block;
-    margin: 50px 50px 0 0;
-  }
-  h1 {
-    position: absolute;
-    top: 0;
-    right: 10px;
-  }
-  ul {
-    list-style-type: none;
-  }
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
+
   /* Outer wrapper can collapse all the way because there is no padding or borders */
 
   nav {
@@ -158,6 +143,8 @@ margin-left: 400px;*/
     -ms-transition: 0.5s;
     -o-transition: 0.5s;
     transition: 0.5s;
+    position: fixed;
+    /*float: right;*/
   }
   nav.active {
     max-height: 10em;
@@ -314,4 +301,9 @@ margin-left: 400px;*/
   a.error-button.victoria-three:hover:after {
     height: 140%;
     opacity: 1;
+  }
+
+  .header {
+    float: right;
+    margin-right: 20%;
   }
