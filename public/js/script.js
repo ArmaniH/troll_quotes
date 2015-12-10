@@ -32,38 +32,28 @@ $(document).ready(function(){
     })
   })
 
+var i = 1;
   $('#export').on('click', function() {
     html2canvas($('#rectangle'), {
       "logging" : false,
       "allowTaint": true,
       onrendered: function(canvas) {
-        theCanvas = canvas;
-        console.log(theCanvas)
-        document.body.appendChild(canvas);
+        // document.body.appendChild(canvas);
+        // canvas = ($('<canvas/>',{ id:"canvas"+i }));
         $("#favorites").append(canvas);
-        return Canvas2Image.saveAsPNG(canvas);
+        // return Canvas2Image.saveAsPNG(canvas);
         // document.body.removeChild(canvas);
+         var d= ($('<input/>',{ type:"button", id:"delete"+i, value:"delete"}));
+         $("#favorites").append(d);
+         i++;
       },
     });
-
-//     function downloadCanvas(link, canvasId, filename) {
-//     link.href = document.getElementById('#favorites').toDataURL('#favorites');
-//     link.download = filename;
-// }
-//
-//   function nowSave(){
-//       var namefile = prompt("insert name of file to save in png");
-//       if(namefile === "") {
-//           alert("You must enter name of file")
-//       } else {
-//       downloadCanvas(document.getElementById("download"), 'canvas', namefile + ".png");
-//       }
-//   }
-//
-// document.getElementById('download').addEventListener('click', nowSave, false);
   });
 
-  });
+   $('#delete').on('click', function() {
+        document.body.remove();
+    });
+});
 
   $('.button').click(function(e){
     e.preventDefault();
