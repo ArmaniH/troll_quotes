@@ -99,6 +99,10 @@ a.animated-button.victoria-three:hover:after {
   padding: 10em;
 }
 
+#can1 {
+  display: table;
+}
+
 #favorites{
   display: table;
   width: 100%;
@@ -111,7 +115,7 @@ a.animated-button.victoria-three:hover:after {
   left: -200px;
   top: 0;
   padding: 1em;
-  
+
 ul {
   list-style-type: none;
 }

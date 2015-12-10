@@ -38,6 +38,7 @@ var i = 1;
       "logging" : false,
       "allowTaint": true,
       onrendered: function(canvas) {
+        var c= ($('<canvas/>', { id: "canvas"+i}));
         // document.body.appendChild(canvas);
         // canvas = ($('<canvas/>',{ id:"canvas"+i }));
         $("#favorites").append(canvas);
