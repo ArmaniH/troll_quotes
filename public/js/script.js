@@ -45,14 +45,12 @@ $(document).ready(function() {
         // document.body.appendChild(canvas);
         // canvas = ($('<canvas/>',{ id:"canvas"+i }));
         $("#favorites").append(canvas);
-        // return Canvas2Image.saveAsPNG(canvas);
-        // document.body.removeChild(canvas);
-        var d = ($('<input/>', {
-          type: "button",
-          id: "delete" + i,
-          value: "delete"
-        }));
-        $("#favorites").append(d);
+        // var d = ($('<input/>', {
+        //   type: "button",
+        //   id: "delete" + i,
+        //   value: "delete"
+        // }));
+        // $("#favorites").append(d);
         i++;
       },
     });

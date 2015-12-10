@@ -25,5 +25,37 @@
   </script>
 </head>
 
+<<<<<<< HEAD
+=======
+<body>
+
+  <header class="header">
+    <a href="" class="menu b">Menu</a>
+    <nav class="nav">
+      <ul>
+        {{#if currentUser}}
+        <li><a href="/logout">Logout</a></li<a>
+          {{else}}
+          <li><a href="/login">Login</a></li>
+          <li><a href="/signup">Signup</a></li>
+          {{/if}}
+      </ul>
+    </nav>
+  </header>
+
+  {{#if currentUser.local.email}} Welcome {{currentUser.local.email}}! {{else if currentUser.twitter.username}} Welcome {{currentUser.twitter.username}}! {{else if currentUser.facebook.first_name}} Welcome {{currentUser.facebook.first_name}}! {{else}} {{/if}}
+
+  <div id="rectangle">
+    <img src="" class="image">
+    <p class='quote'></p>
+    <p class='author'></p>
+  </div>
+  <a href="" class="animated-button victoria-three">Generate Quote</a>
+
+  <!-- <a href="" id="button">Here</a> -->
+  <input type="button" class="favorite" id="export" value="Favorite" />
+  <div id="favorites"> </div>
+</body>
+>>>>>>> f072b43f309accca7834523c0b8f6df7d017134a
 
 </html>
