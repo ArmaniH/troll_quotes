@@ -14,12 +14,15 @@ var app = express();
 var path = require("path");
 var bodyParser = require("body-parser");
 
+<<<<<<< HEAD
 app.use(express.static(path.join(__dirname, "/public")));
 app.use(bodyParser.json());
 
 app.get("/", function(req, res){
   res.render("layout.hbs");
 });
+=======
+>>>>>>> d0b7ac9d0682ae9d30c91fd44249a2eb5d2dc722
 
 app.use(morgan('dev'));
 app.use(cookieParser());

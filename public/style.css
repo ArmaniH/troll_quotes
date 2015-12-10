@@ -11,7 +11,7 @@ body {
   border: 2px solid #D24D57;
   margin: 30px auto 0;
   position: relative;
-  margin-top: 5%
+  margin-top: 5%;
 }
 
 img {
@@ -19,31 +19,28 @@ img {
   /*height: 350px;*/
   position: absolute;
   bottom: 0;
-}
-
-pre {
- white-space: pre-wrap;       /* css-3 */
- white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
- white-space: -pre-wrap;      /* Opera 4-6 */
- white-space: -o-pre-wrap;    /* Opera 7 */
- word-wrap: break-word;       /* Internet Explorer 5.5+ */
- float: right;
- width: 50%;
- overflow: visible;
- clear: right;
+  /*display: none;*/
 }
 
 p {
-  width: 50%;
+  width: 35%;
+  /*margin-top: 100px;
+  margin-left: 400px;*/
+  text-align: right;
   float: right;
   overflow: hidden;
   display: inline-block;
   clear: right;
+  padding-right: 5%;
   font-weight: 400;
 }
 
 .author {
   font-style: italic;
+  text-align: right;
+  padding-right: 5%;
+  /*clear: right;*/
+
 }
 
 a.animated-button:link, a.animated-button:visited {
@@ -97,7 +94,6 @@ a.animated-button.victoria-three:hover:after {
 	opacity: 1;
 }
 
-<<<<<<< HEAD
 ul {
   list-style-type: none;
 }
