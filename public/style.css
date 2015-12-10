@@ -1,231 +1,317 @@
-body {
-  background-color: #1f2a44;
-  color: white;
-  font-family: 'Roboto', sans-serif;
-}
+  body {
+    background-color: #1f2a44;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+  }
+  #rectangle {
+    width: 600px;
+    height: 400px;
+    background: #283237;
+    border: 2px solid #D24D57;
+    margin: 30px auto 0;
+    position: relative;
+    margin-top: 5%;
+  }
+  img {
+    width: 350px;
+    /*height: 350px;*/
+    position: absolute;
+    bottom: 0;
+    /*display: none;*/
+  }
+  p {
+    width: 35%;
+    /*margin-top: 100px;
+margin-left: 400px;*/
+    text-align: right;
+    float: right;
+    overflow: hidden;
+    display: inline-block;
+    clear: right;
+    padding-right: 5%;
+    font-weight: 400;
+  }
+  .author {
+    font-style: italic;
+    text-align: right;
+    padding-right: 5%;
+    /*clear: right;*/
+  }
+  /* Generate Button */
 
-#rectangle {
-	width: 600px;
-	height: 400px;
-	background: #283237;
-  border: 2px solid #D24D57;
-  margin: 30px auto 0;
-  position: relative;
-  margin-top: 5%;
-}
+  a.animated-button:link, a.animated-button:visited {
+    position: relative;
+    display: block;
+    margin: 30px auto 0;
+    padding: 14px 15px;
+    width: 20%;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    letter-spacing: .08em;
+    border-radius: 0;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+  }
+  a.animated-button:link:after, a.animated-button:visited:after {
+    content: "";
+    position: absolute;
+    height: 0%;
+    left: 50%;
+    top: 50%;
+    width: 150%;
+    z-index: -1;
+    -webkit-transition: all 0.75s ease 0s;
+    -moz-transition: all 0.75s ease 0s;
+    -o-transition: all 0.75s ease 0s;
+    transition: all 0.75s ease 0s;
+  }
+  a.animated-button.victoria-three {
+    border: 2px solid #D24D57;
+  }
+  a.animated-button.victoria-three:after {
+    background: #D24D57;
+    opacity: .5;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
+  a.animated-button.victoria-three:hover:after {
+    height: 140%;
+    opacity: 1;
+  }
+  /* Favorites Styling*/
 
-img {
-  width: 350px;
-  /*height: 350px;*/
-  position: absolute;
-  bottom: 0;
-  /*display: none;*/
-}
+  .favorite {
+    position: absolute;
+    padding: 10em;
+  }
+  #favorites {
+    display: table;
+    width: 100%;
+    float: left;
+  }
+  .off-screen {
+    position: fixed;
+    left: -200px;
+    top: 0;
+    padding: 1em;
+  }
+  ul {
+    list-style-type: none;
+  }
+  a {
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+  }
+  /* Hamburger Menu */
 
-p {
-  width: 35%;
-  /*margin-top: 100px;
-  margin-left: 400px;*/
-  text-align: right;
-  float: right;
-  overflow: hidden;
-  display: inline-block;
-  clear: right;
-  padding-right: 5%;
-  font-weight: 400;
-}
+  @import url(http://fonts.googleapis.com/css?family=Open+Sans);
+  *, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    padding: 25px;
+    font: 16px/1.4 'Open Sans', sans-serif;
+  }
+  header {
+    float: left;
+    display: inline-block;
+    margin: 50px 50px 0 0;
+  }
+  h1 {
+    position: absolute;
+    top: 0;
+    right: 10px;
+  }
+  ul {
+    list-style-type: none;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  /* Outer wrapper can collapse all the way because there is no padding or borders */
 
-.author {
-  font-style: italic;
-  text-align: right;
-  padding-right: 5%;
-  /*clear: right;*/
+  nav {
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+  }
+  nav.active {
+    max-height: 10em;
+  }
+  /* Inner wrapper can have padding and borders but can't collapse full as a result */
 
-}
-
-a.animated-button:link, a.animated-button:visited {
-	position: relative;
-	display: block;
-	margin: 30px auto 0;
-	padding: 14px 15px;
-  width: 20%;
-	color: #fff;
-	font-size:14px;
-	font-weight: 500;
-	text-align: center;
-	text-decoration: none;
-	text-transform: uppercase;
-	overflow: hidden;
-	letter-spacing: .08em;
-	border-radius: 0;
-	text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
-	-webkit-transition: all 1s ease;
-	-moz-transition: all 1s ease;
-	-o-transition: all 1s ease;
-	transition: all 1s ease;
-}
-a.animated-button:link:after, a.animated-button:visited:after {
-	content: "";
-	position: absolute;
-	height: 0%;
-	left: 50%;
-	top: 50%;
-	width: 150%;
-	z-index: -1;
-	-webkit-transition: all 0.75s ease 0s;
-	-moz-transition: all 0.75s ease 0s;
-	-o-transition: all 0.75s ease 0s;
-	transition: all 0.75s ease 0s;
-}
-
-a.animated-button.victoria-three {
-	border: 2px solid #D24D57;
-}
-a.animated-button.victoria-three:after {
-	background: #D24D57;
-	opacity: .5;
-	-moz-transform: translateX(-50%) translateY(-50%);
-	-ms-transform: translateX(-50%) translateY(-50%);
-	-webkit-transform: translateX(-50%) translateY(-50%);
-	transform: translateX(-50%) translateY(-50%);
-}
-a.animated-button.victoria-three:hover:after {
-	height: 140%;
-	opacity: 1;
-}
-
-.favorite {
-  position: absolute;
-  padding: 10em;
-}
-
-#favorites{
-  display: table;
-  width: 100%;
-  float: left;
-}
-
-
-.off-screen {
-  position: fixed;
-  left: -200px;
-  top: 0;
-  padding: 1em;
-
-ul {
-  list-style-type: none;
-}
-
-a {
-  color: #fff;
-  font-size:14px;
-	font-weight: bold;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: .08em;
-  text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
-}
-
-#twitter-login {
-  margin-left: 400px;
-.favorite {
-  position: absolute;
-  padding: 10em;
-}
-
-.off-screen {
-  position: fixed;
-  left: -200px;
-  top: 0;
-  padding: 1em;
-}
-
-.error-back-button {
-  position: relative;
-  margin-left: 20px;
-}
-
-#error-rectangle {
-	width: 600px;
-	height: 400px;
-	background: #283237;
-  border: 2px solid #2fb331;
-  margin: 30px auto 0;
-  position: relative;
-  margin-top: 11.15%;
-}
-
-.error-text {
-  width: 35%;
-  /*margin-top: 100px;
-  margin-left: 400px;*/
-  font-size: 18px;
-  text-align: right;
-  float: right;
-  overflow: hidden;
-  display: inline-block;
-  clear: right;
-  padding-right: 8%;
-  padding-top: 7%;
-  font-weight: 400;
-  color: #D24D57;
-}
-
-.error-image {
-  width: 450px;
-  /*height: 350px;*/
-  position: absolute;
-  bottom: 0;
-  /*display: none;*/
-}
-
-a.error-button:link, a.error-button:visited {
-	position: relative;
-	display: block;
-	margin: 30px auto 0;
-	padding: 14px 15px;
-  width: 20%;
-	color: #fff;
-	font-size:14px;
-	font-weight: 500;
-	text-align: center;
-	text-decoration: none;
-	text-transform: uppercase;
-	overflow: hidden;
-	letter-spacing: .08em;
-	border-radius: 0;
-	text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
-	-webkit-transition: all 1s ease;
-	-moz-transition: all 1s ease;
-	-o-transition: all 1s ease;
-	transition: all 1s ease;
-}
-a.error-button:link:after, a.error-button:visited:after {
-	content: "";
-	position: absolute;
-	height: 0%;
-	left: 50%;
-	top: 50%;
-	width: 150%;
-	z-index: -1;
-	-webkit-transition: all 0.75s ease 0s;
-	-moz-transition: all 0.75s ease 0s;
-	-o-transition: all 0.75s ease 0s;
-	transition: all 0.75s ease 0s;
-}
-
-a.error-button.victoria-three {
-	border: 2px solid #2fb331;
-}
-a.error-button.victoria-three:after {
-	background: #2fb331;
-	opacity: .5;
-	-moz-transform: translateX(-50%) translateY(-50%);
-	-ms-transform: translateX(-50%) translateY(-50%);
-	-webkit-transform: translateX(-50%) translateY(-50%);
-	transform: translateX(-50%) translateY(-50%);
-}
-a.error-button.victoria-three:hover:after {
-	height: 140%;
-	opacity: 1;
-}
+  ul {
+    display: inline-block;
+    width: 150px;
+    padding: 10px;
+    background: #000;
+    color: #fff;
+  }
+  li a {
+    display: block;
+    padding: 5px;
+  }
+  li a:hover {
+    background: #888;
+  }
+  .a {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 24px;
+    border-bottom: 5px solid #000;
+    border-top: 5px solid #000;
+  }
+  .a:before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    /* Needs to be explicitly defined and not "inherit" for practical uses */
+    height: 10px;
+    border-bottom: 5px solid #000;
+  }
+  .b {
+    position: relative;
+    display: inline-block;
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .b:before, .b:after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    right: -50px;
+    display: inline-block;
+    width: 36px;
+    /* Makes the pseudo elements clickable since we're using box-shadows */
+    height: 26px;
+    /* Makes the pseudo elements clickable since we're using box-shadows */
+  }
+  .b:after {
+    height: 6px;
+    background: #000;
+    border-radius: 3px;
+    box-shadow: 0 10px 0 0 #000, 0 20px 0 0 #000;
+  }
+  #twitter-login {
+    margin-left: 400px;
+  }
+  .favorite {
+    position: absolute;
+    padding: 10em;
+  }
+  .off-screen {
+    position: fixed;
+    left: -200px;
+    top: 0;
+    padding: 1em;
+  }
+  .error-back-button {
+    position: relative;
+    margin-left: 20px;
+  }
+  #error-rectangle {
+    width: 600px;
+    height: 400px;
+    background: #283237;
+    border: 2px solid #2fb331;
+    margin: 30px auto 0;
+    position: relative;
+    margin-top: 11.15%;
+  }
+  .error-text {
+    width: 35%;
+    /*margin-top: 100px;
+    margin-left: 400px;*/
+    font-size: 18px;
+    text-align: right;
+    float: right;
+    overflow: hidden;
+    display: inline-block;
+    clear: right;
+    padding-right: 8%;
+    padding-top: 7%;
+    font-weight: 400;
+    color: #D24D57;
+  }
+  .error-image {
+    width: 450px;
+    /*height: 350px;*/
+    position: absolute;
+    bottom: 0;
+    /*display: none;*/
+  }
+  a.error-button:link, a.error-button:visited {
+    position: relative;
+    display: block;
+    margin: 30px auto 0;
+    padding: 14px 15px;
+    width: 20%;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    letter-spacing: .08em;
+    border-radius: 0;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+  }
+  a.error-button:link:after, a.error-button:visited:after {
+    content: "";
+    position: absolute;
+    height: 0%;
+    left: 50%;
+    top: 50%;
+    width: 150%;
+    z-index: -1;
+    -webkit-transition: all 0.75s ease 0s;
+    -moz-transition: all 0.75s ease 0s;
+    -o-transition: all 0.75s ease 0s;
+    transition: all 0.75s ease 0s;
+  }
+  a.error-button.victoria-three {
+    border: 2px solid #2fb331;
+  }
+  a.error-button.victoria-three:after {
+    background: #2fb331;
+    opacity: .5;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
+  a.error-button.victoria-three:hover:after {
+    height: 140%;
+    opacity: 1;
+  }

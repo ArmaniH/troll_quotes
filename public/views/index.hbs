@@ -1,49 +1,30 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <!-- gets rid of /#_=_ that facebook automatically appends to index url  -->
-    <script type="text/javascript">
-      if (window.location.hash == '#_=_') {
-        window.location.hash = ''; // for older browsers, leaves a # behind
-        history.pushState('', document.title, window.location.pathname); // nice and clean
-        e.preventDefault(); // no page reload
-      }
-    </script>
-  </head>
-  <body>
 
-    <ul>
-      {{#if currentUser}}
-        <li><a href="/logout">Logout</a></li<a>
-      {{else}}
-        <li><a href="/login">Login</a></li>
-        <li><a href="/signup">Signup</a></li>
-      {{/if}}
-    </ul>
+<head>
+  <!-- gets rid of /#_=_ that facebook automatically appends to index url  -->
+  <script type="text/javascript">
+    if (window.location.hash == '#_=_') {
+      window.location.hash = ''; // for older browsers, leaves a # behind
+      history.pushState('', document.title, window.location.pathname); // nice and clean
+      e.preventDefault(); // no page reload
+    }
+  </script>
+</head>
 
+<body>
 
+  {{#if currentUser.local.email}} Welcome {{currentUser.local.email}}! {{else if currentUser.twitter.username}} Welcome {{currentUser.twitter.username}}! {{else if currentUser.facebook.first_name}} Welcome {{currentUser.facebook.first_name}}! {{else}} {{/if}}
 
-    {{#if currentUser.local.email}}
-      Welcome {{currentUser.local.email}}!
+  <div id="rectangle">
+    <img src="" class="image">
+    <p class='quote'></p>
+    <p class='author'></p>
+  </div>
+  <a href="" class="animated-button victoria-three">Generate Quote</a>
+  <a href="" id="button">Here</a>
+  <input type="button" class="favorite" id="export" value="Favorite" />
+  <div id="favorites"> </div>
+</body>
 
-      {{else if currentUser.twitter.username}}
-        Welcome {{currentUser.twitter.username}}!
-
-      {{else if currentUser.facebook.first_name}}
-        Welcome {{currentUser.facebook.first_name}}!
-
-      {{else}}
-
-    {{/if}}
-
-    <div id="rectangle">
-      <img src="" class="image">
-      <p class='quote'></p>
-      <p class='author'></p>
-    </div>
-    <a href="" class="animated-button victoria-three">Generate Quote</a>
-    <a href="" id="button">Here</a>
-    <input type="button" class="favorite" id="export" value="Favorite"/>
-    <div id="favorites"> </div>
-  </body>
 </html>
