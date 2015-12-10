@@ -1,16 +1,6 @@
 <!DOCTYPE html>
 <html>
 
-    <ul>
-      {{#if currentUser}}
-        <li><a href="/logout">Logout</a></li<a> <input type="button" class="favorite" id="export" value="Favorite"/> <div id="favorites"> </div>
-      {{else}}
-        <li><a href="/login">Login</a></li>
-        <li><a href="/signup">Signup</a></li>
-      {{/if}}
-    </ul>
-
-
   {{#if currentUser.local.email}} Welcome {{currentUser.local.email}}! {{else if currentUser.twitter.username}} Welcome {{currentUser.twitter.username}}! {{else if currentUser.facebook.first_name}} Welcome {{currentUser.facebook.first_name}}! {{else}} {{/if}}
 
 

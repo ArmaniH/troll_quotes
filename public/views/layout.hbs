@@ -17,7 +17,8 @@
     <nav class="nav">
       <ul>
         {{#if currentUser}}
-        <li><a href="/logout">Logout</a></li<a>
+        <li><a href="/logout">Logout</a></li>
+        <li><a input type="button" class="favorite" id="export" value="Favorite"/></a></li>
           {{else}}
           <li><a href="/login">Login</a></li>
           <li><a href="/signup">Signup</a></li>
