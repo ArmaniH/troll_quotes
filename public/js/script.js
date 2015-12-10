@@ -30,32 +30,34 @@ $(document).ready(function(){
       authorTag.text("- " + author);
       quoteTag.text('"' + quote + '"');
     })
-<<<<<<< HEAD
+
   })
 
+var i = 1;
   $('#export').on('click', function() {
     html2canvas($('#rectangle'), {
       "logging" : false,
       "allowTaint": true,
       onrendered: function(canvas) {
-        theCanvas = canvas;
-        document.body.appendChild(canvas);
+        // document.body.appendChild(canvas);
+        // canvas = ($('<canvas/>',{ id:"canvas"+i }));
         $("#favorites").append(canvas);
-        return Canvas2Image.saveAsPNG(canvas);
-        document.body.removeChild(canvas);
+        // return Canvas2Image.saveAsPNG(canvas);
+        // document.body.removeChild(canvas);
+         var d= ($('<input/>',{ type:"button", id:"delete"+i, value:"delete"}));
+         $("#favorites").append(d);
+         i++;
       },
     });
   });
-=======
 
-  });
+   $('#delete').on('click', function() {
+        document.body.remove();
+    });
+});
 
   $('.button').click(function(e){
     e.preventDefault();
     var authorTag = $('.author');
     console.log(authorTag.text());
   });
-
-
->>>>>>> d0b7ac9d0682ae9d30c91fd44249a2eb5d2dc722
-});
