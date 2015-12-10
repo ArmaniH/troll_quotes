@@ -21,7 +21,7 @@ $(document).ready(function() {
     $.getJSON(randomTroll)
       .done(function(res) {
         response = res;
-        console.log(res);
+        console.log(response);
         var author = res.author.name;
         var quote = res.quote.text;
         var image = res.image.url;
@@ -64,7 +64,7 @@ $(document).ready(function() {
   $('#button').click(function(e) {
     e.preventDefault();
     console.log(response);
-});
+  });
 
 
 
