@@ -94,15 +94,17 @@ a.animated-button.victoria-three:hover:after {
 	opacity: 1;
 }
 
-<<<<<<< HEAD
 .favorite {
   position: absolute;
   padding: 10em;
 }
 
 #favorites{
-  display: inline-block;
+  display: table;
+  width: 100%;
+  float: left;
 }
+
 
 .off-screen {
   position: fixed;

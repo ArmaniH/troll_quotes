@@ -42,9 +42,25 @@ $(document).ready(function(){
         document.body.appendChild(canvas);
         $("#favorites").append(canvas);
         return Canvas2Image.saveAsPNG(canvas);
-        document.body.removeChild(canvas);
+        // document.body.removeChild(canvas);
       },
     });
+
+//     function downloadCanvas(link, canvasId, filename) {
+//     link.href = document.getElementById('#favorites').toDataURL('#favorites');
+//     link.download = filename;
+// }
+//
+//   function nowSave(){
+//       var namefile = prompt("insert name of file to save in png");
+//       if(namefile === "") {
+//           alert("You must enter name of file")
+//       } else {
+//       downloadCanvas(document.getElementById("download"), 'canvas', namefile + ".png");
+//       }
+//   }
+//
+// document.getElementById('download').addEventListener('click', nowSave, false);
   });
 
   });
@@ -54,5 +70,3 @@ $(document).ready(function(){
     var authorTag = $('.author');
     console.log(authorTag.text());
   });
-
-});

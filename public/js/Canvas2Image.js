@@ -40,10 +40,10 @@ var Canvas2Image = function () {
 		return retCanvas;
 	}
 
-	// function getDataURL (canvas, type, width, height) {
-	// 	canvas = scaleCanvas(canvas, width, height);
-	// 	return canvas.toDataURL(type);
-	// }
+	function getDataURL (canvas, type, width, height) {
+		canvas = scaleCanvas(canvas, width, height);
+		return canvas.toDataURL(type);
+	}
 
 	function saveFile (strData) {
 		document.location.href = strData;
