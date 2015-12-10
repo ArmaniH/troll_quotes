@@ -41,10 +41,8 @@ $(document).ready(function() {
       "logging": false,
       "allowTaint": true,
       onrendered: function(canvas) {
-        var c= ($('<canvas/>', { id: "canvas"+i}));
-        // document.body.appendChild(canvas);
-        // canvas = ($('<canvas/>',{ id:"canvas"+i }));
         $("#favorites").append(canvas);
+      //Delete button not working at this time
         // var d = ($('<input/>', {
         //   type: "button",
         //   id: "delete" + i,
