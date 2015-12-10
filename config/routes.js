@@ -40,6 +40,9 @@ router.route('/auth/facebook/callback')
      successRedirect: '/',
      failureRedirect: '/login'
      }));
-     
+
+router.route("/secret")
+  .get(authenticatedUser, usersController.secret)
+
 
 module.exports = router;

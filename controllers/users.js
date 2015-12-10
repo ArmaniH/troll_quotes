@@ -33,10 +33,15 @@ function getLogout(req, res) {
   res.redirect('/');
 }
 
+function secret(request, response){
+  response.render("secret.hbs");
+}
+
 module.exports = {
   getLogin: getLogin,
   postLogin: postLogin,
   getSignup: getSignup,
   postSignup: postSignup,
-  getLogout: getLogout
+  getLogout: getLogout,
+  secret: secret
 };

@@ -15,6 +15,8 @@
     <ul>
       {{#if currentUser}}
         <li><a href="/logout">Logout</a></li<a>
+          <input type="button" class="favorite" id="export" value="Favorite"/>
+          <div id="favorites"> </div>
       {{else}}
         <li><a href="/login">Login</a></li>
         <li><a href="/signup">Signup</a></li>
@@ -43,7 +45,6 @@
     </div>
     <a href="" class="animated-button victoria-three">Generate Quote</a>
     <a href="" class="button">Here</a>
-    <input type="button" class="favorite" id="export" value="Favorite"/>
-    <div id="favorites"> </div>
+
   </body>
 </html>
