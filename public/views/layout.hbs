@@ -9,9 +9,22 @@
 
     <script src="js/html2canvas.js"></script>
     <script src="js/Canvas2Image.js"></script>
+
   </head>
   <body>
-
+    <header class="header">
+    <a href="" class="menu b">Menu</a>
+    <nav class="nav">
+      <ul>
+        {{#if currentUser}}
+        <li><a href="/logout">Logout</a></li<a>
+          {{else}}
+          <li><a href="/login">Login</a></li>
+          <li><a href="/signup">Signup</a></li>
+          {{/if}}
+      </ul>
+    </nav>
+  </header>
 
 {{{ body }}}
 
