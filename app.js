@@ -41,8 +41,13 @@ app.use(function (req, res, next) {
   next();
 });
 
+
 var routes = require('./config/routes');
 app.use(routes);
+
+app.use(function(req, res, next) {
+  res.status(404).render('error.hbs');
+});
 
 
 

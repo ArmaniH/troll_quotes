@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-
+    <!-- gets rid of /#_=_ that facebook automatically appends to index url  -->
+    <script type="text/javascript">
+      if (window.location.hash == '#_=_') {
+        window.location.hash = ''; // for older browsers, leaves a # behind
+        history.pushState('', document.title, window.location.pathname); // nice and clean
+        e.preventDefault(); // no page reload
+      }
+    </script>
   </head>
   <body>
 
@@ -22,8 +29,8 @@
       {{else if currentUser.twitter.username}}
         Welcome {{currentUser.twitter.username}}!
 
-      {{else if currentUser.facebook.id}}
-        Welcome {{currentUser.facebook.id}}!
+      {{else if currentUser.facebook.first_name}}
+        Welcome {{currentUser.facebook.first_name}}!
 
       {{else}}
         Welcome!

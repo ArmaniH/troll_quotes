@@ -15,11 +15,12 @@ var User = mongoose.Schema({
   facebook : {
     id: String,
     token: String,
-    name: String
-    // email: String
-    // first_name: String
+    name: String,
+    first_name: String
   }
 });
+
+
 
 User.methods.validPassword = function(password) {
   return bcrypt.compareSync(password, this.local.password);
