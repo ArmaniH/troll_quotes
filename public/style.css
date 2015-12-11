@@ -311,38 +311,38 @@ margin-left: 400px;*/
   }
 
   .login {
-  margin: 20px auto;
-  width: 300px;
+    margin: 20px auto;
+    width: 300px;
   }
 
   h2 {
-  text-align: center;
-  color: #fff;
-  font-family: 'Roboto', sans-serif;
-  font-size: 40px;
-  margin: 2px;
+    text-align: center;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    margin: 2px;
   }
 
   .form-group {
-  text-align: center;
+    text-align: center;
   }
 
   input.form-control {
-  text-align: center;
-  background-color: #ECF0F1;
-  border: 2px solid transparent;
-  border-radius: 3px;
-  font-size: 16px;
-  font-weight: 200;
-  padding: 10px 0;
-  margin: 2px;
-  width: 250px;
-  transition: border .5s;
+    text-align: center;
+    background-color: #ECF0F1;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 200;
+    padding: 10px 0;
+    margin: 2px;
+    width: 250px;
+    transition: border .5s;
   }
 
   input:focus {
-  border: 2px solid #3498DB;
-  box-shadow: none;
+    border: 2px solid #3498DB;
+    box-shadow: none;
   }
 
   #sub-btn {
