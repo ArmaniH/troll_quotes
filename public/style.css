@@ -210,9 +210,11 @@ margin-left: 400px;*/
     border-radius: 3px;
     box-shadow: 0 10px 0 0 #000, 0 20px 0 0 #000;
   }
-  #twitter-login {
-    margin-left: 400px;
+
+  * {
+  box-sizing: border-box;
   }
+
 
   .error-back-button {
     position: relative;
@@ -302,4 +304,88 @@ margin-left: 400px;*/
   .header {
     float: right;
     margin-right: 20%;
+  }
+
+  *:focus {
+  	outline: none;
+  }
+
+  .login {
+  margin: 20px auto;
+  width: 300px;
+  }
+
+  h2 {
+  text-align: center;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 40px;
+  margin: 2px;
+  }
+
+  .form-group {
+  text-align: center;
+  }
+
+  input.form-control {
+  text-align: center;
+  background-color: #ECF0F1;
+  border: 2px solid transparent;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 200;
+  padding: 10px 0;
+  margin: 2px;
+  width: 250px;
+  transition: border .5s;
+  }
+
+  input:focus {
+  border: 2px solid #3498DB;
+  box-shadow: none;
+  }
+
+  #sub-btn {
+    border: 2px solid transparent;
+    background: #3498DB;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 25px;
+    padding: 10px 0;
+    text-decoration: none;
+    text-shadow: none;
+    border-radius: 3px;
+    box-shadow: none;
+    transition: 0.25s;
+    display: block;
+    width: 250px;
+    margin: 0 auto;
+  }
+
+  .btn:hover {
+    background-color: #2980B9;
+  }
+
+  .login-link {
+    font-size: 12px;
+    color: #444;
+    display: block;
+  	margin-top: 12px;
+  }
+
+  .social {
+    padding-bottom: 200px;
+    text-align: center;
+  }
+
+  #twitter-login {
+    position: relative;
+    height: 56px;
+    width: 200px;
+  }
+
+  #facebook-login {
+    position: relative;
+    height: 52px;
+    width: 200px;
   }
