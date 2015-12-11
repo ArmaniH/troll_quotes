@@ -1,5 +1,5 @@
 var mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost/troll_quotes");
+mongoose.connect(process.env.MONGOLAB_URL || "mongodb://localhost/your-app-name");
 
 var Schema = mongoose.Schema;
 var ObjectId = Schema.objectId;

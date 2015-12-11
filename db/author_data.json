@@ -1,3 +1,5 @@
+export MONGOLAB_URI="mongodb://ArmaniH:nanami13@ds027825.mongolab.com:27825/trollquotes"
+
 {
   "name": [
     "Benjamin Franklin",
