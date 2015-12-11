@@ -1,9 +1,6 @@
-var mongodbUri = 'mongodb://localhost/trollquotes';
-var conn = mongoose.connect(process.env.MONGOLAB_URI || mongodbUri);
-
 require("./schema");
 var mongoose   = require("mongoose");
-var db         = mongoose.connection(process.env.MONGOLAB_URI || 'mongodb://localhost/trollquotes');;
+var db         = mongoose.connection;
 var AuthorData = require("./author_data");
 var ImageData  = require("./image_data");
 var QuoteData  = require("./quote_data");
